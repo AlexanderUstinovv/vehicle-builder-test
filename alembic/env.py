@@ -6,6 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from app.db.model.data_library import *
+from app.db.model.vehicle_configurator import *
 
 from app.db.model.base import BaseModel
 from app.db.settings import DATABASE_URL
