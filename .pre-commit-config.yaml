@@ -15,6 +15,7 @@ repos:
       language: system
       types: [python]
       args: [--line-length=100, --target-version=py38]
+      files: app\/(.*)\/*..py
 
     - id: autoflake
       name: autoflake
@@ -22,6 +23,7 @@ repos:
       language: system
       types: [python]
       args: [--in-place, --remove-all-unused-imports, --remove-duplicate-keys]
+      files: app\/(.*)\/*..py
 
     - id: pyupgrade
       name: pyupgrade
@@ -29,6 +31,7 @@ repos:
       language: system
       types: [python]
       args: [--py38-plus]
+      files: app\/(.*)\/*..py
 
     - id: reorder-python-imports
       name: reorder-python-imports
@@ -36,9 +39,11 @@ repos:
       language: system
       types: [python]
       args: [--py38-plus]
+      files: app\/(.*)\/*..py
 
     - id: yesqa
       name: yesqa
       entry: yesqa
       language: system
       types: [python]
+      files: app\/(.*)\/*..py
