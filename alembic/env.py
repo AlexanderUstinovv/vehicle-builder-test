@@ -9,11 +9,11 @@ from app.db.model.data_library import *
 from app.db.model.vehicle_configurator import *
 
 from app.db.model.base import BaseModel
-from app.db.settings import DATABASE_URL
+from app.db.settings import DATABASE_MIGRATION_URL
 
 
 config = context.config
-config.set_main_option('sqlalchemy.url', DATABASE_URL)
+config.set_main_option('sqlalchemy.url', DATABASE_MIGRATION_URL)
 
 fileConfig(config.config_file_name)
 
