@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python main.py
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - 8080:8080
+    env_file:
+      - ./.env
