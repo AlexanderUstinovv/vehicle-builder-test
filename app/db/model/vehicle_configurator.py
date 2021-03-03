@@ -6,6 +6,9 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 
 from .base import BaseModel
+from .data_library import Feature
+from .data_library import Formation
+from .data_library import Function
 
 
 class Vehicle(BaseModel):
@@ -29,12 +32,12 @@ class LinkFact(BaseModel):
     __tablename__ = "link_fact"
 
     vehicle_id = Column(UUID, ForeignKey("vehicle.id"), nullable=False)
-    vehicle = relationship("Vehicle")
+    vehicle = relationship(Vehicle)
     component_id = Column(UUID, ForeignKey("component.id"), nullable=False)
-    component = relationship("Component")
+    component = relationship(Component)
     feature_id = Column(UUID, ForeignKey("feature.id"), nullable=False)
-    feature = relationship("Feature")
+    feature = relationship(Feature)
     formation_id = Column(UUID, ForeignKey("formation.id"), nullable=False)
-    formation = relationship("Formation")
+    formation = relationship(Formation)
     function_id = Column(UUID, ForeignKey("base_function.id"), nullable=False)
-    function = relationship("Function")
+    function = relationship(Function)

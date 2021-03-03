@@ -9,7 +9,7 @@ class DBSettings(BaseSettings):
     NAME: str
     HOST: str
     PORT: int
-    DIALECT: str = "postgresql"
+    DIALECT: str = "postgresql+asyncpg"
 
     class Config:
         env_prefix = "DB_"

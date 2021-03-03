@@ -66,7 +66,7 @@ class Formation(BaseModel):
     name = Column(String(255), unique=True, nullable=False)
     type = Column(Enum(FormationType), nullable=False)
     parent_id = Column(UUID, ForeignKey("formation.id"), nullable=True)
-    parent = relationship("Formation", remote_side=[id])
+    parent = relationship("Formation", remote_side="Formation.id")
     features = relationship(
         "Feature", secondary=feature_formation_association, back_populates="formations"
     )

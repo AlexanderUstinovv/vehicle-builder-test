@@ -1,4 +1,7 @@
-sqlalchemy==1.3.23
+sqlalchemy==1.4.0b3
 alembic==1.5.5
 pydantic==1.8
 pydantic[dotenv]==3.7.4.3
+aiohttp==3.7.4
+aiohttp-validate==1.1.0
+asyncpg==0.22.0
